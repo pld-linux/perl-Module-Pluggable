@@ -1,5 +1,3 @@
-# ToDo:
-# - pl summary/description
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
@@ -8,7 +6,7 @@
 %define	pdir	Module
 %define	pnam	Pluggable
 Summary:	Automatically give your module the ability to have plugins
-#Summary(pl):	-
+Summary(pl):	Automatyczne umo¿liwianie modu³om posiadania wtyczek
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.5
 Release:	1
@@ -23,17 +21,22 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Provides a simple but, hopefully, extensible way of having 'plugins' for
-your module. Obviously this isn't going to be the be all and end all of
-solutions but it works for me.
+Provides a simple but, hopefully, extensible way of having 'plugins'
+for your module. Obviously this isn't going to be the be all and end
+all of solutions but it works for me.
 
 Essentially all it does is export a method into your namespace that
 looks through a search path for .pm files and turn those into class
-names.
+names. Optionally it instantiates those classes for you.
 
-Optionally it instantiates those classes for you.
+%description -l pl
+Ten modu³ dostarcza prosty, ale rozszerzalny sposób posiadania
+"wtyczek" dla w³asnego modu³u. Oczywi¶cie nie jest to pe³ne i koñcowe
+rozwi±zanie, ale autorowi dzia³a.
 
-#%description -l pl
+Zasadniczo wszystko co robi ten modu³ to wyeksportowanie metody
+przeszukuj±cej ¶cie¿kê pod k±tem plików .pm i zamieniaj±cej je na
+nazwy klas. Opcjonalnie mo¿e dziedziczyæ te klasy.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
