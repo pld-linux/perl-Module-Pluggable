@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Module
-%define	pnam	Pluggable
+%define		pdir	Module
+%define		pnam	Pluggable
 Summary:	Automatically give your module the ability to have plugins
 Summary(pl):	Automatyczne umo¿liwianie modu³om posiadania wtyczek
 Name:		perl-Module-Pluggable
