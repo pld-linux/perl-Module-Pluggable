@@ -10,6 +10,7 @@ Summary(pl):	Automatyczne umo¿liwianie modu³om posiadania wtyczek
 Name:		perl-%{pdir}-%{pnam}
 Version:	1.5
 Release:	1
+# same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
