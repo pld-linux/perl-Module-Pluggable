@@ -8,13 +8,13 @@
 Summary:	Automatically give your module the ability to have plugins
 Summary(pl):	Automatyczne umo¿liwianie modu³om posiadania wtyczek
 Name:		perl-Module-Pluggable
-Version:	2.4
+Version:	2.8
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	0deeee54536cc42c46dcd15a477e2ffe
+# Source0-md5:	7e2fe2f2e4c36ca66f58250b7efdf59c
 BuildRequires:	perl-Module-Build >= 0.02
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
