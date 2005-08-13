@@ -8,13 +8,13 @@
 Summary:	Automatically give your module the ability to have plugins
 Summary(pl):	Automatyczne umo¿liwianie modu³om posiadania wtyczek
 Name:		perl-Module-Pluggable
-Version:	2.9
+Version:	2.95
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b839425a11adf0dd3845cd1b7d22032c
+# Source0-md5:	358365c3cabf2d245ad4f4ca30cd82c5
 BuildRequires:	perl-Module-Build >= 0.02
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -53,10 +53,8 @@ nazwy klas. Opcjonalnie mo¿e dziedziczyæ te klasy.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{perl_vendorlib}/%{pdir},%{_mandir}/man3}
-
-install blib/lib/Module/Pluggable.pm $RPM_BUILD_ROOT%{perl_vendorlib}/%{pdir}
-install blib/man3/*pm $RPM_BUILD_ROOT%{_mandir}/man3
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
