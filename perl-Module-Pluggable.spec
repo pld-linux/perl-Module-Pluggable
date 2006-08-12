@@ -7,14 +7,14 @@
 %define		pnam	Pluggable
 Summary:	Automatically give your module the ability to have plugins
 Summary(pl):	Automatyczne umo¿liwianie modu³om posiadania wtyczek
-Name:		perl-Module-Pluggable
-Version:	2.95
+:e Name:		perl-Module-Pluggable
+Version:	3.1
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	358365c3cabf2d245ad4f4ca30cd82c5
+# Source0-md5:	4ca7144b4a0da45bed0ab986c187f328
 BuildRequires:	perl-Module-Build >= 0.02
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -63,4 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/Module/Pluggable.pm
+# TODO: add Pluggable dir to perl-base
+%{perl_vendorlib}/Module/Pluggable/*
+%{perl_vendorlib}/Devel/InnerPackage.pm
 %{_mandir}/man3/*
