@@ -9,7 +9,7 @@ Summary:	Automatically give your module the ability to have plugins
 Summary(pl):	Automatyczne umo¿liwianie modu³om posiadania wtyczek
 Name:		perl-Module-Pluggable
 Version:	3.1
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -65,6 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/Module/Pluggable.pm
 # TODO: add Pluggable dir to perl-base
+%dir %{perl_vendorlib}/Module/Pluggable
 %{perl_vendorlib}/Module/Pluggable/*
 %{perl_vendorlib}/Devel/InnerPackage.pm
 %{_mandir}/man3/*
