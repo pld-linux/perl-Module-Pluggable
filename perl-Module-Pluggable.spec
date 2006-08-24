@@ -19,6 +19,7 @@ BuildRequires:	perl-Class-Inspector
 BuildRequires:	perl-Module-Build >= 0.02
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-dirs >= 1.0-5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -64,8 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/Module/Pluggable.pm
-# TODO: add Pluggable dir to perl-base
-%dir %{perl_vendorlib}/Module/Pluggable
 %{perl_vendorlib}/Module/Pluggable/*
 %{perl_vendorlib}/Devel/InnerPackage.pm
 %{_mandir}/man3/*
