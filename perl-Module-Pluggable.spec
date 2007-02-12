@@ -6,7 +6,7 @@
 %define		pdir	Module
 %define		pnam	Pluggable
 Summary:	Automatically give your module the ability to have plugins
-Summary(pl):	Automatyczne umoøliwianie modu≥om posiadania wtyczek
+Summary(pl.UTF-8):   Automatyczne umo≈ºliwianie modu≈Çom posiadania wtyczek
 Name:		perl-Module-Pluggable
 Version:	3.4
 Release:	1
@@ -33,14 +33,14 @@ Essentially all it does is export a method into your namespace that
 looks through a search path for .pm files and turn those into class
 names. Optionally it instantiates those classes for you.
 
-%description -l pl
-Ten modu≥ dostarcza prosty, ale rozszerzalny sposÛb posiadania
-"wtyczek" dla w≥asnego modu≥u. Oczywi∂cie nie jest to pe≥ne i koÒcowe
-rozwi±zanie, ale autorowi dzia≥a.
+%description -l pl.UTF-8
+Ten modu≈Ç dostarcza prosty, ale rozszerzalny spos√≥b posiadania
+"wtyczek" dla w≈Çasnego modu≈Çu. Oczywi≈õcie nie jest to pe≈Çne i ko≈Ñcowe
+rozwiƒÖzanie, ale autorowi dzia≈Ça.
 
-Zasadniczo wszystko co robi ten modu≥ to wyeksportowanie metody
-przeszukuj±cej ∂cieøkÍ pod k±tem plikÛw .pm i zamieniaj±cej je na
-nazwy klas. Opcjonalnie moøe dziedziczyÊ te klasy.
+Zasadniczo wszystko co robi ten modu≈Ç to wyeksportowanie metody
+przeszukujƒÖcej ≈õcie≈ºkƒô pod kƒÖtem plik√≥w .pm i zamieniajƒÖcej je na
+nazwy klas. Opcjonalnie mo≈ºe dziedziczyƒá te klasy.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
