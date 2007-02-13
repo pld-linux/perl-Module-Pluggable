@@ -6,7 +6,7 @@
 %define		pdir	Module
 %define		pnam	Pluggable
 Summary:	Automatically give your module the ability to have plugins
-Summary(pl.UTF-8):   Automatyczne umożliwianie modułom posiadania wtyczek
+Summary(pl.UTF-8):	Automatyczne umożliwianie modułom posiadania wtyczek
 Name:		perl-Module-Pluggable
 Version:	3.4
 Release:	1
