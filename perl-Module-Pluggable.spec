@@ -9,8 +9,7 @@ Summary:	Automatically give your module the ability to have plugins
 Summary(pl.UTF-8):	Automatyczne umożliwianie modułom posiadania wtyczek
 Name:		perl-Module-Pluggable
 Version:	3.9
-Release:	2
-# same as perl
+Release:	3
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Module/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -66,6 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes
 %{perl_vendorarch}/Devel/InnerPackage.pm
 %{perl_vendorarch}/Module/Pluggable.pm
+%dir %{perl_vendorarch}/Module
 %dir %{perl_vendorarch}/Module/Pluggable
 %{perl_vendorarch}/Module/Pluggable/Object.pm
 %{_mandir}/man3/*
