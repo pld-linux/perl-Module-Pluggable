@@ -8,18 +8,18 @@
 Summary:	Automatically give your module the ability to have plugins
 Summary(pl.UTF-8):	Automatyczne umożliwianie modułom posiadania wtyczek
 Name:		perl-Module-Pluggable
-Version:	3.9
-Release:	4
+Version:	4.0
+Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Module/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	e2410a59c917f44c1de9a816f0492985
+# Source0-md5:	c99a74962f8295b914a4a44188204add
 URL:		http://search.cpan.org/dist/Module-Pluggable/
 BuildRequires:	perl-Class-Inspector
 BuildRequires:	perl-Module-Build >= 0.02
-BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-dirs >= 1.0-5
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -63,9 +63,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%{perl_vendorarch}/Devel/InnerPackage.pm
-%{perl_vendorarch}/Module/Pluggable.pm
-%dir %{perl_vendorarch}/Module
-%dir %{perl_vendorarch}/Module/Pluggable
-%{perl_vendorarch}/Module/Pluggable/Object.pm
+%{perl_vendorlib}/Devel/InnerPackage.pm
+%{perl_vendorlib}/Module/Pluggable.pm
+%dir %{perl_vendorlib}/Module
+%dir %{perl_vendorlib}/Module/Pluggable
+%{perl_vendorlib}/Module/Pluggable/Object.pm
 %{_mandir}/man3/*
