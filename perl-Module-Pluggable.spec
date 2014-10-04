@@ -16,7 +16,8 @@ Source0:	http://www.cpan.org/modules/by-module/Module/%{pdir}-%{pnam}-%{version}
 # Source0-md5:	1b71ed7a67ad8c048d1499540bc892ba
 URL:		http://search.cpan.org/dist/Module-Pluggable/
 BuildRequires:	perl-Class-Inspector
-BuildRequires:	perl-Module-Build >= 0.02
+BuildRequires:	perl-Module-Build >= 0.38
+%{?with_tests:BuildRequires:	perl-Test-Simple >= 0.62}
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	perl-dirs >= 1.0-5
 BuildArch:	noarch
@@ -68,4 +69,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorlib}/Module
 %dir %{perl_vendorlib}/Module/Pluggable
 %{perl_vendorlib}/Module/Pluggable/Object.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Devel::InnerPackage.3pm*
+%{_mandir}/man3/Module::Pluggable*.3pm*
