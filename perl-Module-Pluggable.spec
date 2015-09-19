@@ -1,24 +1,25 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	Module
 %define		pnam	Pluggable
+%include	/usr/lib/rpm/macros.perl
 Summary:	Automatically give your module the ability to have plugins
 Summary(pl.UTF-8):	Automatyczne umożliwianie modułom posiadania wtyczek
 Name:		perl-Module-Pluggable
-Version:	5.1
+Version:	5.2
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Module/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	1b71ed7a67ad8c048d1499540bc892ba
+# Source0-md5:	87ce2971662efd0b69a81bb4dc9ea76c
 URL:		http://search.cpan.org/dist/Module-Pluggable/
 BuildRequires:	perl-Class-Inspector
 BuildRequires:	perl-Module-Build >= 0.38
 %{?with_tests:BuildRequires:	perl-Test-Simple >= 0.62}
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-Module-Runtime >= 0.012
 Requires:	perl-dirs >= 1.0-5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
